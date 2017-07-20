@@ -11,9 +11,9 @@ License: GPLv2 or later (license.txt)
 
 */
 
-namespace ETForceLogin;
+namespace ET_Force_Login;
 
-class ForceLogin {
+class Force_Login {
 
 	public function __construct() {
 
@@ -40,4 +40,4 @@ class ForceLogin {
 
 }
 
-new ForceLogin();
+new Force_Login();

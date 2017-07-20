@@ -1,6 +1,6 @@
 <?php
 
-namespace ETForceLogin;
+namespace ET_Force_Login;
 
 class Actions {
 
