@@ -20,7 +20,7 @@ class Actions {
 			$site_url      = site_url( '/' );
 			$requested_url = ( ! empty( $_SERVER['HTTPS'] ) ? 'https' : 'http' ) . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 			
-			//added for ManageWP - it was complaining about the redirect
+			//added for ManageWP - it was complaining about the redirect on the home page
 			if ( $requested_url == $site_url ) {
 				add_action( 'wp_loaded', function () {
 					require_once ABSPATH . 'wp-login.php';
