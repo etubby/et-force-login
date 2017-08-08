@@ -19,6 +19,8 @@ class Actions {
 		if ( ! is_user_logged_in() && ( strpos( $_SERVER['PHP_SELF'], 'wp-login.php' ) === false && strpos( $_SERVER['PHP_SELF'], 'wp-register.php' ) === false ) ) {
 			$site_url      = site_url( '/' );
 			$requested_url = ( ! empty( $_SERVER['HTTPS'] ) ? 'https' : 'http' ) . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+			
+			//added for ManageWP - it was complaining about the redirect
 			if ( $requested_url == $site_url ) {
 				add_action( 'wp_loaded', function () {
 					require_once ABSPATH . 'wp-login.php';
